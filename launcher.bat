@@ -178,12 +178,12 @@ goto backup_menu
 
 :run_mingw64
 	mkdir _tmp
-	echo cd %~1 > .\_tmp\launch.sh
-	echo ./%~2 >> .\_tmp\launch.sh
-	echo read -p ^"Press enter to continue^" >> .\_tmp\launch.sh
+	echo cd %~1 > _tmp\launch.sh
+	echo ./%~2 >> _tmp\launch.sh
+	echo read -p ^"Press enter to continue^" >> _tmp\launch.sh
 	C:\msys64\mingw64.exe ./_tmp/launch.sh
 	call :wait "mintty.exe"
-	rd /s /q .\_tmp
+	rd /s /q _tmp
 goto eof
 	
 

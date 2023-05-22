@@ -135,7 +135,7 @@ goto eof
 	set val_b=0
 	
 	IF /I '%IN_B%'=='1' set val_b=1 & call :run_mingw64 ./game-and-watch-backup/, "1_sanity_check.sh %adapter% %system%"
-	IF /I '%IN_B%'=='2' set val_b=1 & call :run_mingw64 ./game-and-watch-backup/, "2_backup_flash.se %adapter% %system%"
+	IF /I '%IN_B%'=='2' set val_b=1 & call :run_mingw64 ./game-and-watch-backup/, "2_backup_flash.sh %adapter% %system%"
 	IF /I '%IN_B%'=='3' set val_b=1 & call :run_mingw64 ./game-and-watch-backup/, "3_backup_internal_flash.sh %adapter% %system%"
 	IF /I '%IN_B%'=='4' set val_b=1 & call :run_mingw64 ./game-and-watch-backup/, "4_unlock_device.sh %adapter% %system%"
 	IF /I '%IN_B%'=='5' set val_b=1 & call :run_mingw64 ./game-and-watch-backup/, "5_restore.sh %adapter% %system%"
